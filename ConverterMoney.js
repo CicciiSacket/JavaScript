@@ -93,14 +93,6 @@ function Converter(ValutaStart, money, ValutaResult) {
     return "la conversione da\t" + money + ValutaStart + "\ta\t" + result + ValutaResult + "\t è avvenuta"
 }
 
-// console.log(Converter("USD",1,"EUR"))
-// console.log(Converter("GBP",1,"EUR"))
-// console.log(Converter("JPY",1,"EUR"))
-
-
-
-
-
 const taxChange = require("./value.json")
 
 function defineConverter (ValutaStart, money, ValutaResult){//USD = dollaro statunitense; GBP = sterlina britanica; EUR = euro; JPY = yen giapponese
@@ -173,5 +165,3 @@ console.log(defineConverter("JPY",1,"GBP"))
 
 console.log(defineConverter("JPY",1,"JPY"))
 console.log(defineConverter("JPY",0,"GBP"))
-
-
