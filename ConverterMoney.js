@@ -105,6 +105,9 @@ const taxChange = require("./value.json")
 
 function defineConverter (ValutaStart, money, ValutaResult){//USD = dollaro statunitense; GBP = sterlina britanica; EUR = euro; JPY = yen giapponese
     var result = 0
+    if(ValutaStart === ValutaResult || money <= 0){
+        return "404"
+    }
     if (ValutaStart == "EUR") {
         if (ValutaResult == "USD") {
             result = money * taxChange.values[0].euroDollaro
@@ -166,4 +169,9 @@ console.log(defineConverter("GBP",1,"JPY"))
 console.log(defineConverter("JPY",1,"EUR"))
 console.log(defineConverter("JPY",1,"USD"))
 console.log(defineConverter("JPY",1,"GBP"))
+
+
+console.log(defineConverter("JPY",1,"JPY"))
+console.log(defineConverter("JPY",0,"GBP"))
+
 
