@@ -92,8 +92,78 @@ function Converter(ValutaStart, money, ValutaResult) {
 
     return "la conversione da\t" + money + ValutaStart + "\ta\t" + result + ValutaResult + "\t è avvenuta"
 }
-//USD = dollaro statunitense; GBP = sterlina britanica; EUR = euro; JPY = yen giapponese
-console.log(Converter("USD",1,"EUR"))
-console.log(Converter("GBP",1,"EUR"))
-console.log(Converter("JPY",1,"EUR"))
+
+// console.log(Converter("USD",1,"EUR"))
+// console.log(Converter("GBP",1,"EUR"))
+// console.log(Converter("JPY",1,"EUR"))
+
+
+
+
+
+const taxChange = require("./value.json")
+
+function defineConverter (ValutaStart, money, ValutaResult){//USD = dollaro statunitense; GBP = sterlina britanica; EUR = euro; JPY = yen giapponese
+    var result = 0
+    if (ValutaStart == "EUR") {
+        if (ValutaResult == "USD") {
+            result = money * taxChange.values[0].euroDollaro
+        }
+        else if(ValutaResult == "JPY"){
+            result = money * taxChange.values[0].euroYEN
+        }
+        else if(ValutaResult == "GBP"){
+            result = money * taxChange.values[0].euroSterlina
+        }        
+    }
+    if (ValutaStart == "USD") {
+        if (ValutaResult == "EUR") {
+            result = money * taxChange.values[1].dollaroEuro
+        }
+        else if(ValutaResult == "JPY"){
+            result = money * taxChange.values[1].dollaroYEN
+        }
+        else if(ValutaResult == "GBP"){
+            result = money * taxChange.values[1].dollaroSterlina
+        }        
+    }
+    if (ValutaStart == "JPY") {
+        if (ValutaResult == "EUR") {
+            result = money * taxChange.values[2].YenEuro
+        }
+        else if(ValutaResult == "USD"){
+            result = money * taxChange.values[2].YenDollaro
+        }
+        else if(ValutaResult == "GBP"){
+            result = money * taxChange.values[2].yenSterlina
+        }        
+    }
+    if (ValutaStart == "GBP") {
+        if (ValutaResult == "EUR") {
+            result = money * taxChange.values[3].SterlinaEuro
+        }
+        else if(ValutaResult == "USD"){
+            result = money * taxChange.values[3].SterlinaDollaro
+        }
+        else if(ValutaResult == "JPY"){
+            result = money * taxChange.values[3].SterlinaYEN
+        }        
+    }
+    return"la conversione da\t" + money + ValutaStart + "\ta\t" + result + ValutaResult + "\t è avvenuta"
+}
+console.log(defineConverter("EUR",1,"USD"))
+console.log(defineConverter("EUR",1,"GBP"))
+console.log(defineConverter("EUR",1,"JPY"))
+
+console.log(defineConverter("USD",1,"EUR"))
+console.log(defineConverter("USD",1,"GBP"))
+console.log(defineConverter("USD",1,"JPY"))
+
+console.log(defineConverter("GBP",1,"EUR"))
+console.log(defineConverter("GBP",1,"USD"))
+console.log(defineConverter("GBP",1,"JPY"))
+
+console.log(defineConverter("JPY",1,"EUR"))
+console.log(defineConverter("JPY",1,"USD"))
+console.log(defineConverter("JPY",1,"GBP"))
 

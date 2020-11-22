@@ -1,0 +1,23 @@
+{
+"values": [
+    {
+        "euroDollaro" : 1.16,
+        "euroYEN" : 121.92,
+        "euroSterlina" :0.90  
+    },
+    {
+        "dollaroEuro" : 0.86,
+        "dollaroYEN" : 104.87,
+        "dollaroSterlina" : 0.78
+    },
+    {   
+        "YenEuro" : 0.0082,
+        "YenDollaro" : 0.0095,
+        "yenSterlina" : 0.00742
+    },
+    {
+        "SterlinaDollaro" : 1.29,
+        "SterlinaEuro" : 1.11,
+        "SterlinaYEN" : 135.21
+    }]
+}
