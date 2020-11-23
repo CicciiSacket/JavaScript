@@ -37,3 +37,42 @@ typeof test // restituisce il tipo di variabile
 
 
 // node script.js per eseguire lo script da terminale
+
+
+
+
+// [...test] spread operator che si può usare per concatenare due array ad esempio
+
+// a = [1,2,3]
+// b = [a,b,c]
+// c = [...a,...b] prendi il valore di A e spalmalo su B
+
+//LO STESSO RAGIONAMENTO FUNZIONA CON GLI OGGETTI CAMBIA CHE SI USANO LE PARENTESI GRAFFE
+
+
+/* 
+
+    var conversions = require('./values.json');
+var items = conversions.map(item => item.originalValue);
+var set = new Set(items); // set non è un array e non posso applicare metodi degli array
+var valideCurrency = [...set]; // operazione di spread, includere all'interno tutto il set e converirlo in array 
+// console.log(valideCurrency); // [ '€', '$', '£', '¥' ]
+var convert = (currencyToStart, currencyToEnd, value) => {
+    if (valideCurrency.includes(currencyToStart) && valideCurrency.includes(currencyToEnd)) {
+        var convertedObject = conversions.find(item => item.originalValue === currencyToStart && item.convertedValue === currencyToEnd);
+        return convertedObject.taxConversion * value;
+    }
+    return {message: 'format not valid'};
+}
+console.log(convert("L", "€", 2));
+var a = ['a', 'b', 'c'];
+var b = [1, 2, 3];
+var c = [...a, ...b]; // spread 
+console.log(c);
+var obj1 = {name: 'Carlo', surname: 'Leonardi'};
+var obj2 = {age: 36};
+var obj3 = {...obj1, ...obj2};
+console.log(obj3);
+// console.log(conversions);
+
+*/
