@@ -14,14 +14,20 @@ function type(x,y,z){
     }
     else return 'scaleno'
 } 
-function triangle(x,y,z){
+
+ 
+
+var triangle=(x,y,z)=>{
     if(x > y-z && y > x-z && z > x-y){
         return 'this is a triangle'
     }
-    else return 'not a tringle';
+    else 
+    return 'not a tringle';
+    // var dio = 'cane'
+    // return dio
 }
 
-console.log(triangle(3,4,5))
-console.log(type(3,4,5))
+// console.log(triangle(3,4,5))
+// console.log(type(3,4,5))
 
 

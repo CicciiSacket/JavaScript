@@ -24,3 +24,5 @@ function CountChar(mario,char){ //INDICA IN CHE POSIZIONE SI TROVA IL CHAR E NE 
 }
 
 console.log(CountChar("Cicci",'i'))
+
+

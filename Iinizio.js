@@ -1,11 +1,11 @@
 
-_total //identificatore valido sono case sensitive
+// _total //identificatore valido sono case sensitive
 
-let test = 12 //inizializzare variabile
+// let test = 12 //inizializzare variabile
 
-typeof test // restituisce il tipo di variabile
+// typeof test // restituisce il tipo di variabile
 
-3<4 ? "yes":"no"// ? operatore ternario, restituisce il secondo operando se risulta valida altrimneti restuisce il terzo operando
+// 3<4 ? "yes":"no"// ? operatore ternario, restituisce il secondo operando se risulta valida altrimneti restuisce il terzo operando
 
 //subprogram consente attreverso un singolo punto di accesso di eseguire la computazione delle istruzioni definite all'interno di un blocco di codide asseganto 
 //si distinguono in due tipi: funzioni(tornano un valore) e procedure(nonn tornano valore), in js le procedure non sono implementate quindi le funzioni possono non tornare un valore;

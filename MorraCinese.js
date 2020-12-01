@@ -1,5 +1,4 @@
-//gioco della morra cinese
-function morra(){
+ var  morra = ()=>{
     giocata = Math.random()
     if(giocata <= 0.33 ){
         return 'carta'
@@ -12,7 +11,7 @@ function morra(){
     }  
 }
 
-function winner(choise){
+ function winner(choise){
     if(choise == morra()){
         return 0 //pari
     }
@@ -22,5 +21,3 @@ function winner(choise){
     else return 1 //vittoria
 }
 
-choise = 'forbice'
-console.log(winner(choise))
