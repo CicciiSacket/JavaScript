@@ -31,4 +31,7 @@ output :
 5
 4
 data.txt
-*/// questo perchè nel modello asincrono l'avvio di un'azione provoca una suddivione della timeline, ovvero il programma che ha iniziato l'azione continua la sua esecuzione e in parallelo l'azione promise procede affiancata notificando il programma quando si risolve
+*/
+// questo perchè nel modello asincrono l'avvio di un'azione provoca una suddivione della timeline, 
+// ovvero il programma che ha iniziato l'azione continua la sua esecuzione e in parallelo l'azione promise 
+// procede affiancata notificando il programma quando si risolve

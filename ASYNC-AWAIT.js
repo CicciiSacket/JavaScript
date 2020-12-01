@@ -21,7 +21,6 @@ let main = async function(){// cosi è asincrona e avrà data.txt come ULTIMA ST
 }
 // main()
 
-
 let main2 = async function(){// con await diventa sincrona e la stringa data.txt verrà stampata tra start ed end come lineare in codice
     console.log('\nstart')
 
